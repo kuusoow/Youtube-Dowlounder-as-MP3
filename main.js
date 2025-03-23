@@ -2,9 +2,9 @@ document
   .querySelector("#Search-form")
   .addEventListener("submit", async function (e) {
     e.preventDefault();
-    const query = document.querySelector("#Search-input").value;
+    const query = document.querySelector("#Search-input").value.trim();
 
-    const url = `https://youtube-v3-alternative.p.rapidapi.com/search?query= ${query} &type=video`;
+    const url = `https://youtube-v3-alternative.p.rapidapi.com/search?query= ${query}`;
     const options = {
       method: "GET",
       headers: {
